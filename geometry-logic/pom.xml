@@ -9,7 +9,7 @@
         <version>1.2.0</version>
     </parent>
 
-    <artifactId>geometry-utils</artifactId>
+    <artifactId>geometry-logic</artifactId>
     <packaging>jar</packaging>
 
     <properties>
