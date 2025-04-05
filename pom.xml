@@ -6,8 +6,11 @@
 
     <groupId>org.example</groupId>
     <artifactId>my-geometry-lib</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>1.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>geometry-utils</module>
+    </modules>
 
     <repositories>
         <repository>

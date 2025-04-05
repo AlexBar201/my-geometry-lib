@@ -3,30 +3,30 @@
 public class Circle {
 
     //Радиус круга
-    private double r;
+    private static double r;
 
-<span class="fc" id="L8">    public Circle(double radius){</span>
-<span class="fc" id="L9">        this.r = radius;</span>
-<span class="fc" id="L10">    }</span>
+<span class="nc" id="L8">    public Circle(double radius){</span>
+<span class="nc" id="L9">        r = radius;</span>
+<span class="nc" id="L10">    }</span>
 
     //Метод вычисления площади круга
-    public double areaCircle(){
+    public static double areaCircle(){
 <span class="fc" id="L14">        return Math.PI * Math.pow(r, 2);</span>
     }
 
     //Метод вычисления периметра круга
-    public double perimeterCircle(){
+    public static double perimeterCircle(){
 <span class="fc" id="L19">        return 2 * Math.PI * r;</span>
     }
 
     //Геттер
-    public double getR() {
+    public static double getR() {
 <span class="nc" id="L24">        return r;</span>
     }
 
     //Сеттер
-    public void setR(double r) {
-<span class="nc" id="L29">        this.r = r;</span>
-<span class="nc" id="L30">    }</span>
+    public static void setR(double r) {
+<span class="fc" id="L29">        Circle.r = r;</span>
+<span class="fc" id="L30">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
