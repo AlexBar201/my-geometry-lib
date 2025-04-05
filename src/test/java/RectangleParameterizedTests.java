@@ -28,14 +28,16 @@ public class RectangleParameterizedTests {
     @Test
     public void ariaRectangleTest(){
         double expected = length * width;
-        Rectangle rectangle = new Rectangle(length, width);
-        Assert.assertEquals(expected, rectangle.areaRectangle(), 0.01);
+        Rectangle.setA(length);
+        Rectangle.setB(width);
+        Assert.assertEquals(expected, Rectangle.areaRectangle(), 0.01);
     }
 
     @Test
     public void perimeterRectangleTest(){
         double expected = (length + width) * 2;
-        Rectangle rectangle = new Rectangle(length, width);
-        Assert.assertEquals(expected, rectangle.perimeterRectangle(), 0.01);
+        Rectangle.setA(length);
+        Rectangle.setB(width);
+        Assert.assertEquals(expected, Rectangle.perimeterRectangle(), 0.01);
     }
 }

@@ -3,29 +3,29 @@ package com.example;
 public class Circle {
 
     //Радиус круга
-    private double r;
+    private static double r;
 
     public Circle(double radius){
-        this.r = radius;
+        r = radius;
     }
 
     //Метод вычисления площади круга
-    public double areaCircle(){
+    public static double areaCircle(){
         return Math.PI * Math.pow(r, 2);
     }
 
     //Метод вычисления периметра круга
-    public double perimeterCircle(){
+    public static double perimeterCircle(){
         return 2 * Math.PI * r;
     }
 
     //Геттер
-    public double getR() {
+    public static double getR() {
         return r;
     }
 
     //Сеттер
-    public void setR(double r) {
-        this.r = r;
+    public static void setR(double r) {
+        Circle.r = r;
     }
 }

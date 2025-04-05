@@ -29,13 +29,13 @@ public class CircleParameterizedTests {
 
     @Test
     public void ariaCircleTest(){
-        Circle circle = new Circle(radius);
-        Assert.assertEquals(expectedOne, circle.areaCircle(), 0.5);
+        Circle.setR(radius);
+        Assert.assertEquals(expectedOne, Circle.areaCircle(), 0.5);
     }
 
     @Test
     public void ariaPerimeterTest(){
-        Circle circle = new Circle(radius);
-        Assert.assertEquals(expectedTwo, circle.perimeterCircle(), 0.5);
+        Circle.setR(radius);
+        Assert.assertEquals(expectedTwo, Circle.perimeterCircle(), 0.5);
     }
 }

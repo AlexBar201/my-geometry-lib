@@ -3,105 +3,105 @@ package com.example;
 public class Triangle {
 
     //Сторона треугольника
-    private double a;
+    private static double a;
 
     //Сторона треугольника
-    private double b;
+    private static double b;
 
     //Основание треугольника
-    private double c;
+    private static double c;
 
     //Высота треугольника
-    private double h;
+    private static double h;
 
     //Угол между двумя сторонами треугольника
-    private float angle;
+    private static float angle;
 
     public Triangle(double sideOne, double sideTwo, double sideThree){
-        this.a = sideOne;
-        this.b = sideTwo;
-        this.c = sideThree;
+        a = sideOne;
+        b = sideTwo;
+        c = sideThree;
     }
 
     public Triangle(double sideOne, double sideTwo, float angle){
-        this.a = sideOne;
-        this.b = sideTwo;
-        this.angle = angle;
+        a = sideOne;
+        b = sideTwo;
+        Triangle.angle = angle;
     }
 
     public Triangle(double base, double height){
-        this.c = base;
-        this.h = height;
+        c = base;
+        h = height;
     }
 
     //Метод для вычисления периметра треугольника
-    public double perimeterTriangle(){
+    public static double perimeterTriangle(){
         return a + b + c;
     }
 
     //Метод для вычисления площади треугольника через три стороны
-    public double areaThreeSideTriangle(){
+    public static double areaThreeSideTriangle(){
         double p = perimeterTriangle();
         return Math.sqrt((p * (p - a) * (p - b) * (p - c)));
     }
 
     //Метод для вычисления площади через две стороны и угол между ними
-    public double areaTwoSideAngleTriangle(){
+    public static double areaTwoSideAngleTriangle(){
         return a * b * 0.5 * Math.sin(angle);
     }
 
     //Метод вычисления площади через основание и высоту
-    public double areaBaseHeightTriangle(){
+    public static double areaBaseHeightTriangle(){
         return c * h * 0.5;
     }
 
     //Геттер для стороны треугольника
-    public double getA() {
+    public static double getA() {
         return a;
     }
 
     //Сеттер для стороны треугольника
-    public void setA(double a) {
-        this.a = a;
+    public static void setA(double a) {
+        Triangle.a = a;
     }
 
     //Геттер для стороны треугольника
-    public double getB() {
+    public static double getB() {
         return b;
     }
 
     //Сеттер для стороны треугольника
-    public void setB(double b) {
-        this.b = b;
+    public static void setB(double b) {
+        Triangle.b = b;
     }
 
     //Геттер для основания треугольника
-    public double getC() {
+    public static double getC() {
         return c;
     }
 
     //Сеттер для основания треугольника
-    public void setC(double c) {
-        this.c = c;
+    public static void setC(double c) {
+        Triangle.c = c;
     }
 
     //Геттер для высоты треугольника
-    public double getH() {
+    public static double getH() {
         return h;
     }
 
     //Сеттер для высоты треугольника
-    public void setH(double h) {
-        this.h = h;
+    public static void setH(double h) {
+        Triangle.h = h;
     }
 
     //Геттер для угла между двумя сторонами треугольника
-    public float getAngle() {
+    public static float getAngle() {
         return angle;
     }
 
     //Сеттер для угла между двумя сторонами треугольника
-    public void setAngle(float angle) {
-        this.angle = angle;
+    public static void setAngle(float angle) {
+        Triangle.angle = angle;
     }
 }

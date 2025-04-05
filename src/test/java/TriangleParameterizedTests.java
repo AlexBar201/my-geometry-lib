@@ -41,25 +41,32 @@ public class TriangleParameterizedTests {
 
     @Test
     public void perimeterTriangleTest(){
-        Triangle triangle = new Triangle(a, b, c);
-        Assert.assertEquals(expectedOne, triangle.perimeterTriangle(), 0.1);
+        Triangle.setA(a);
+        Triangle.setB(b);
+        Triangle.setC(c);
+        Assert.assertEquals(expectedOne, Triangle.perimeterTriangle(), 0.1);
     }
 
     @Test
     public void ariaThreeSideTriangleTest(){
-        Triangle triangle = new Triangle(a, b, c);
-        Assert.assertEquals(expectedThree, triangle.areaThreeSideTriangle(), 0.1);
+        Triangle.setA(a);
+        Triangle.setB(b);
+        Triangle.setC(c);
+        Assert.assertEquals(expectedThree, Triangle.areaThreeSideTriangle(), 0.1);
     }
 
     @Test
     public void ariaTwoSideAngleTriangleTest(){
-        Triangle triangle = new Triangle(a, b, angle);
-        Assert.assertEquals(expectedTwo, triangle.areaTwoSideAngleTriangle(), 0.1);
+        Triangle.setA(a);
+        Triangle.setB(b);
+        Triangle.setAngle(angle);
+        Assert.assertEquals(expectedTwo, Triangle.areaTwoSideAngleTriangle(), 0.1);
     }
 
     @Test
     public void ariaBaseHeightTriangleTest(){
-        Triangle triangle = new Triangle(c, h);
-        Assert.assertEquals(expectedFour, triangle.areaBaseHeightTriangle(), 0.1);
+        Triangle.setC(c);
+        Triangle.setH(h);
+        Assert.assertEquals(expectedFour, Triangle.areaBaseHeightTriangle(), 0.1);
     }
 }
